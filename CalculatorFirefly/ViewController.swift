@@ -48,25 +48,58 @@ class ViewController: UIViewController {
         outputLabel.text = "0"
     }
     @IBAction func decimalPressed(_ sender: Any) {
-        if runningNum.count <= 7 && !runningNum.contains(".") {
-            runningNum += "."
+        if outputLabel.text != "0" {
+            if runningNum.count <= 7 && !runningNum.contains(".") {
+                runningNum += "."
+                outputLabel.text = runningNum
+            }
+        } else {
+            runningNum = "0."
             outputLabel.text = runningNum
         }
     }
     @IBAction func equalPressed(_ sender: Any) {
-        
+        operation(operation: currentOperation)
     }
     @IBAction func plusPressed(_ sender: Any) {
-        
+        operation(operation: .Add)
     }
     @IBAction func minusPressed(_ sender: Any) {
-        
+        operation(operation: .Subtract)
     }
     @IBAction func multiplyPressed(_ sender: Any) {
-        
+        operation(operation: .Multiply)
     }
     @IBAction func dividePressed(_ sender: Any) {
-        
+        operation(operation: .Divide)
+    }
+    
+    func operation(operation: Operation) {
+        if currentOperation != .NULL {
+            if runningNum != "" {
+                rightValue = runningNum
+                runningNum = ""
+                
+                if currentOperation == .Add {
+                    result = "\(Double(leftValue)! + Double(rightValue)!)"
+                } else if currentOperation == .Subtract {
+                    result = "\(Double(leftValue)! - Double(rightValue)!)"
+                } else if currentOperation == .Multiply {
+                    result = "\(Double(leftValue)! * Double(rightValue)!)"
+                } else if currentOperation == .Divide {
+                    result = "\(Double(leftValue)! / Double(rightValue)!)"
+                }
+                leftValue = result
+                if(Double(result)!.truncatingRemainder(dividingBy: 1) == 0) {
+                    result = "\(Int(Double(result)!))"
+                }
+                outputLabel.text = result
+            }
+            currentOperation = operation
+        } else {
+            leftValue = runningNum
+            runningNum = ""
+            currentOperation = operation
+        }
     }
 }
-
