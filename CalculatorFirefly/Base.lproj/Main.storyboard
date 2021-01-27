@@ -299,6 +299,14 @@
                                     <action selector="equalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwt-Xw-7Xo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK3-ue-BqA">
+                                <rect key="frame" x="35" y="52" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="icons8-menu-48"/>
+                                <connections>
+                                    <segue destination="pEy-NE-yKZ" kind="show" id="2vv-NP-bIV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -310,6 +318,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Hmaburger View-->
+        <scene sceneID="3ri-dX-N4p">
+            <objects>
+                <viewController id="pEy-NE-yKZ" customClass="HmaburgerView" customModule="CalculatorFirefly" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aed-Nx-2sJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drK-iM-vCe">
+                                <rect key="frame" x="148" y="42" width="118" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="34"/>
+                                <color key="textColor" red="0.67122477290000004" green="0.68095552920000002" blue="0.76863890889999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xDi-DU-F5X">
+                                <rect key="frame" x="20" y="101" width="374" height="741"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HBR-Wv-ZNP"/>
+                        <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bQY-7F-T7r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BqC-mM-Maj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798.55072463768124" y="138.61607142857142"/>
         </scene>
     </scenes>
     <designables>
@@ -365,4 +402,7 @@
             <size key="intrinsicContentSize" width="30" height="57"/>
         </designable>
     </designables>
+    <resources>
+        <image name="icons8-menu-48" width="48" height="48"/>
+    </resources>
 </document>

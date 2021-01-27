@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E846A67B25C1AAE800827937 /* HamburgerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846A67A25C1AAE800827937 /* HamburgerView.swift */; };
 		E8B9708A25C16F4E009BF1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9708925C16F4E009BF1BD /* AppDelegate.swift */; };
 		E8B9708C25C16F4E009BF1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9708B25C16F4E009BF1BD /* SceneDelegate.swift */; };
 		E8B9708E25C16F4E009BF1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9708D25C16F4E009BF1BD /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E846A67A25C1AAE800827937 /* HamburgerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerView.swift; sourceTree = "<group>"; };
 		E8B9708625C16F4E009BF1BD /* CalculatorFirefly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorFirefly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B9708925C16F4E009BF1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8B9708B25C16F4E009BF1BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E8B9708D25C16F4E009BF1BD /* ViewController.swift */,
 				E8B9708F25C16F4E009BF1BD /* Main.storyboard */,
 				E8B9709225C16F4F009BF1BD /* Assets.xcassets */,
+				E846A67A25C1AAE800827937 /* HamburgerView.swift */,
 				E8B9709F25C170CC009BF1BD /* CircleButton.swift */,
 				E8B9709425C16F4F009BF1BD /* LaunchScreen.storyboard */,
 				E8B9709725C16F4F009BF1BD /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E846A67B25C1AAE800827937 /* HamburgerView.swift in Sources */,
 				E8B9708E25C16F4E009BF1BD /* ViewController.swift in Sources */,
 				E8B9708A25C16F4E009BF1BD /* AppDelegate.swift in Sources */,
 				E8B9708C25C16F4E009BF1BD /* SceneDelegate.swift in Sources */,

@@ -55,7 +55,7 @@ class ClearButton: UIButton {
                 if clearButton {
                     layer.cornerRadius = frame.height / 2
                     layer.borderWidth = 2
-                    layer.borderColor = UIColor(red:67/225, green:73/225, blue:125/225, alpha: 1).cgColor
+                    layer.borderColor = UIColor(red:243/225, green:215/225, blue:107/225, alpha: 1).cgColor
                 }
             }
         }
