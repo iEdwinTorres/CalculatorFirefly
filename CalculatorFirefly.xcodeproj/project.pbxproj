@@ -13,6 +13,7 @@
 		E8B9709125C16F4E009BF1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B9708F25C16F4E009BF1BD /* Main.storyboard */; };
 		E8B9709325C16F4F009BF1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B9709225C16F4F009BF1BD /* Assets.xcassets */; };
 		E8B9709625C16F4F009BF1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B9709425C16F4F009BF1BD /* LaunchScreen.storyboard */; };
+		E8B970A025C170CC009BF1BD /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B9709F25C170CC009BF1BD /* CircleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E8B9709225C16F4F009BF1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8B9709525C16F4F009BF1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8B9709725C16F4F009BF1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8B9709F25C170CC009BF1BD /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				E8B9708D25C16F4E009BF1BD /* ViewController.swift */,
 				E8B9708F25C16F4E009BF1BD /* Main.storyboard */,
 				E8B9709225C16F4F009BF1BD /* Assets.xcassets */,
+				E8B9709F25C170CC009BF1BD /* CircleButton.swift */,
 				E8B9709425C16F4F009BF1BD /* LaunchScreen.storyboard */,
 				E8B9709725C16F4F009BF1BD /* Info.plist */,
 			);
@@ -140,6 +143,7 @@
 				E8B9708E25C16F4E009BF1BD /* ViewController.swift in Sources */,
 				E8B9708A25C16F4E009BF1BD /* AppDelegate.swift in Sources */,
 				E8B9708C25C16F4E009BF1BD /* SceneDelegate.swift in Sources */,
+				E8B970A025C170CC009BF1BD /* CircleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

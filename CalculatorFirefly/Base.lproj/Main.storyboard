@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,337 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculatorFirefly" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcG-zM-aij" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="35" y="782" width="168" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JCz-N8-kG6"/>
+                                    <constraint firstAttribute="width" constant="80" id="JYh-jR-vue"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibc-2N-7Ma" customClass="OperatorlButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="299" y="694" width="80" height="168"/>
+                                <color key="backgroundColor" red="0.95087558029999997" green="0.84750837089999997" blue="0.41950720549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="NfH-CA-VYJ"/>
+                                    <constraint firstAttribute="width" constant="80" id="PCe-jX-bGU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="equalButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="operatorlButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN2-oE-Dde" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="211" y="782" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Fai-Tx-jDP"/>
+                                    <constraint firstAttribute="width" constant="80" id="Jy6-2k-3nr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title=".">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7Z-lu-N70" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="35" y="694" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="2yr-9G-6hw"/>
+                                    <constraint firstAttribute="height" constant="80" id="gzD-Zh-nM7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pof-Pn-xrW" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="123" y="694" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2UN-MU-hKa"/>
+                                    <constraint firstAttribute="width" constant="80" id="eRM-GI-xyT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gv5-EA-XCq" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="211" y="694" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ad4-CW-Zfr"/>
+                                    <constraint firstAttribute="width" constant="80" id="eSN-Qp-zVJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skO-x0-W3F" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="35" y="606" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="2jB-QR-4DP"/>
+                                    <constraint firstAttribute="height" constant="80" id="M3L-g6-R0D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9L-3Z-RnN" customClass="OperatorlButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="299" y="606" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.95087558029999997" green="0.84750837089999997" blue="0.41950720549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Cfh-TL-mJN"/>
+                                    <constraint firstAttribute="width" constant="80" id="QLZ-z3-sgi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="operatorlButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fix-hc-KSw" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="123" y="606" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="XYD-Sm-9Fh"/>
+                                    <constraint firstAttribute="width" constant="80" id="pPr-1d-ahu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SId-y1-LOr" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="211" y="606" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Nls-yV-DLo"/>
+                                    <constraint firstAttribute="width" constant="80" id="XUj-Lr-mOa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kct-uV-KgZ" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="35" y="518" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1zg-hR-ptm"/>
+                                    <constraint firstAttribute="width" constant="80" id="oxg-Ul-pty"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="7">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heg-ia-wKi" customClass="OperatorlButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="299" y="518" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.95087558029999997" green="0.84750837089999997" blue="0.41950720549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="4yA-JP-N82"/>
+                                    <constraint firstAttribute="width" constant="80" id="OyP-x4-Plx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="-">
+                                    <color key="titleColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="operatorlButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVS-Yg-E0b" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="123" y="518" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="AQW-I8-lFy"/>
+                                    <constraint firstAttribute="width" constant="80" id="WUZ-bx-68S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="8">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoi-Dt-dyc" customClass="CircleButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="211" y="518" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="W8k-nA-vEO"/>
+                                    <constraint firstAttribute="width" constant="80" id="x0o-ta-d2c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="9">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjb-jD-hJU" customClass="ClearButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="35" y="430" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Llq-zt-mBa"/>
+                                    <constraint firstAttribute="height" constant="80" id="XcD-lX-sat"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clearButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gm-UW-jUl" customClass="OperatorlButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="299" y="430" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.95087558029999997" green="0.84750837089999997" blue="0.41950720549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="aoQ-0a-Mkk"/>
+                                    <constraint firstAttribute="width" constant="80" id="uKN-OV-mlE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="operatorlButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zf-jM-r2f" customClass="OperatorlButton" customModule="CalculatorFirefly" customModuleProvider="target">
+                                <rect key="frame" x="211" y="430" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.95087558029999997" green="0.84750837089999997" blue="0.41950720549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="SYl-zm-7hd"/>
+                                    <constraint firstAttribute="width" constant="80" id="YYT-cP-4Ny"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="40"/>
+                                <state key="normal" title="÷">
+                                    <color key="titleColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circleButton" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="operatorlButton" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.1792515516" green="0.19817081089999999" blue="0.4313942194" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="equalBtn" destination="ibc-2N-7Ma" id="b1n-zi-Lo9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1gm-UW-jUl">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="4Zf-jM-r2f">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="Gv5-EA-XCq">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="QcG-zM-aij">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="RVS-Yg-E0b">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="SId-y1-LOr">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="V7Z-lu-N70">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="fix-hc-KSw">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="heg-ia-wKi">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="hjb-jD-hJU">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="ibc-2N-7Ma">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="kN2-oE-Dde">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="kct-uV-KgZ">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="pof-Pn-xrW">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="skO-x0-W3F">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="v9L-3Z-RnN">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+        <designable name="yoi-Dt-dyc">
+            <size key="intrinsicContentSize" width="30" height="57"/>
+        </designable>
+    </designables>
 </document>
